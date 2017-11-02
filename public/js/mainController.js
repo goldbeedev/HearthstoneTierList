@@ -68,38 +68,58 @@ navAppend(); //calling navAppend for media query mobile optimization.
 
 //smoothscroll
 
-var about = document.querySelector('#about');
-var meta = document.querySelector('#meta');
-var foresight = document.querySelector('#foresight');
+//can I build an object with key value pairs instead of these 3 variables?
 
-// var exampleDestination = document.querySelector('#page1');
+var pages = {
+	about: document.querySelector('#about'),
+	meta: document.querySelector('#meta'),
+	foresight: document.querySelector('#foresight')
+}
 
-// var handleClick = function(event) {
+Object.keys(pages).forEach(function(key){
+	console.log("pages keys " + key);
+	addEventListener('click', function(event){
+//get clicked key to make this loop work!
+		event.preventDefault();
+		if (key === "about") {
+		smoothScroll(document.querySelector('#page3'));
+	} 	else if (key === "meta") {
+		smoothScroll(document.querySelector('#page2'));
+	} 
+	});
+});
+
+//can I write one function that uses the key value pairs based on what is clicked to smoothscroll to that page?
+
+// pages.about.addEventListener('click', function(event){
 // 	event.preventDefault();
+// 	smoothScroll(document.querySelector('#page1'));
+// });
 
-// 	smoothScroll(exampleDestination);
-// }; //end handleClick
+// pages.meta.addEventListener('click', function(event){
+// 	event.preventDefault();
+// 	smoothScroll(document.querySelector('#page2'));
+// });
 
-about.addEventListener('click', function(event){
-	event.preventDefault();
-	smoothScroll(document.querySelector('#page1'));
-});
-
-meta.addEventListener('click', function(event){
-	event.preventDefault();
-	smoothScroll(document.querySelector('#page2'));
-});
-
-foresight.addEventListener('click', function(event){
-	event.preventDefault();
-	smoothScroll(document.querySelector('#page3'));
-});
+// pages.foresight.addEventListener('click', function(event){
+// 	event.preventDefault();
+// 	smoothScroll(document.querySelector('#page3'));
+// });
 
 //templates for the meta page.
  $scope.templates =
     [{ name: 'metamain.html', url: 'templates/metamain.html'},
-     { name: 'template2.html', url: 'template2.html'}];
+     { name: 'tier1.html', url: 'templates/tier1.html'},
+     { name: 'tier2.html', url: 'templates/tier2.html'},
+     { name: 'tier3.html', url: 'templates/tier3.html'},
+     { name: 'tier4.html', url: 'templates/tier4.html'}];
  $scope.template = $scope.templates[0];
+
+ //tier 1 function to change the template
+
+ $scope.tier1 = function() {
+ 	$scope.template = $scope.templates[1];
+ }
 
 
 }]);	//end controller
