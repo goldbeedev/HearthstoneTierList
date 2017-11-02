@@ -95,6 +95,12 @@ foresight.addEventListener('click', function(event){
 	smoothScroll(document.querySelector('#page3'));
 });
 
+//templates for the meta page.
+ $scope.templates =
+    [{ name: 'metamain.html', url: 'templates/metamain.html'},
+     { name: 'template2.html', url: 'template2.html'}];
+ $scope.template = $scope.templates[0];
+
 
 }]);	//end controller
 })(); //end self invoked function

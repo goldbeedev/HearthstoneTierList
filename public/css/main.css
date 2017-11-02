@@ -252,6 +252,36 @@ i.left {
 	height: 1000px;
 }
 
+.tierbutton {
+	width: 200px;
+	height: 200px;
+	border: 10px solid red;
+}
+
+#tier1 {
+	position: absolute;
+	top: 200px;
+	left: 30%;
+}
+
+#tier2 {
+	position: absolute;
+	top: 400px;
+	left: 50%;
+}
+
+#tier3 {
+	position: absolute;
+	top: 200px;
+	right: 30%;
+}
+
+#tier4 {
+	position: absolute;
+	top: 400px;
+	right: 30%;
+}
+
 button {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
