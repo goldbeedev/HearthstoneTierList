@@ -187,11 +187,6 @@ h1 {
 	height: 50px;
 }
 
-.nasapotd {
-	max-width: 100%;
-	outline: rgba(255,255,255,.2) solid 1px;
-}
-
 i.right {
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -258,6 +253,10 @@ i.left {
 	border: 10px solid red;
 }
 
+.tierbutton h1 {
+	text-align: center;
+}
+
 #tier1 {
 	position: absolute;
 	top: 200px;
@@ -266,8 +265,8 @@ i.left {
 
 #tier2 {
 	position: absolute;
-	top: 400px;
-	left: 50%;
+	top: 550px;
+	left: 30%;
 }
 
 #tier3 {
@@ -278,7 +277,7 @@ i.left {
 
 #tier4 {
 	position: absolute;
-	top: 400px;
+	top: 550px;
 	right: 30%;
 }
 

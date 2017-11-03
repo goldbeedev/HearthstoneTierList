@@ -70,56 +70,60 @@ navAppend(); //calling navAppend for media query mobile optimization.
 
 //can I build an object with key value pairs instead of these 3 variables?
 
-var pages = {
-	about: document.querySelector('#about'),
-	meta: document.querySelector('#meta'),
-	foresight: document.querySelector('#foresight')
+
+//const array of objects for page navigation smoothscroll
+const pages = [
+	{ button: "about", page: "page1"},
+	{ button: "meta", page: "page2"},
+	{ button: "foresight", page: "page3"}
+];
+
+//for loop for each object in the pages array to add click listeners.
+for (const { button, page } of pages) {
+	document.getElementById(button).addEventListener('click', function(event){
+		event.preventDefault();
+		smoothScroll(document.getElementById(page));
+	});
 }
 
-Object.keys(pages).forEach(function(key){
-	console.log("pages keys " + key);
-	addEventListener('click', function(event){
-//get clicked key to make this loop work!
-		event.preventDefault();
-		if (key === "about") {
-		smoothScroll(document.querySelector('#page3'));
-	} 	else if (key === "meta") {
-		smoothScroll(document.querySelector('#page2'));
-	} 
-	});
-});
-
-//can I write one function that uses the key value pairs based on what is clicked to smoothscroll to that page?
-
-// pages.about.addEventListener('click', function(event){
-// 	event.preventDefault();
-// 	smoothScroll(document.querySelector('#page1'));
-// });
-
-// pages.meta.addEventListener('click', function(event){
-// 	event.preventDefault();
-// 	smoothScroll(document.querySelector('#page2'));
-// });
-
-// pages.foresight.addEventListener('click', function(event){
-// 	event.preventDefault();
-// 	smoothScroll(document.querySelector('#page3'));
-// });
-
 //templates for the meta page.
- $scope.templates =
-    [{ name: 'metamain.html', url: 'templates/metamain.html'},
-     { name: 'tier1.html', url: 'templates/tier1.html'},
-     { name: 'tier2.html', url: 'templates/tier2.html'},
-     { name: 'tier3.html', url: 'templates/tier3.html'},
-     { name: 'tier4.html', url: 'templates/tier4.html'}];
- $scope.template = $scope.templates[0];
+ $scope.metatemplates =
+    [{ name: 'metamain', url: 'templates/metamain.html'},
+     { name: 'tier1', url: 'templates/tier1.html'},
+     { name: 'tier2', url: 'templates/tier2.html'},
+     { name: 'tier3', url: 'templates/tier3.html'},
+     { name: 'tier4', url: 'templates/tier4.html'}];
+ $scope.metatemplate = $scope.metatemplates[0];
+
+
+ $scope.foresighttemplates = 
+ 	[{ name: 'foresightmain', url: 'templates/metaforesight.html'},
+ 	 { name: 'ftier1', url: 'templates/ftier1.html'},
+ 	 { name: 'ftier2', url: 'templates/ftier2.html'},
+ 	 { name: 'ftier3', url: 'templates/ftier3.html'},
+ 	 { name: 'ftier4', url: 'templates/ftier4.html'}]
+ $scope.foresighttemplate = $scope.foresighttemplates[0];
 
  //tier 1 function to change the template
+//come up with more efficient solution for this
 
  $scope.tier1 = function() {
- 	$scope.template = $scope.templates[1];
+ 	$scope.metatemplate = $scope.metatemplates[1];
  }
+
+ $scope.tier2 = function() {
+ 	$scope.metatemplate = $scope.metatemplates[2];
+ }
+
+ $scope.tier3 = function() {
+ 	$scope.metatemplate = $scope.metatemplates[3];
+ }
+
+ $scope.tier4 = function() {
+ 	$scope.metatemplate = $scope.metatemplates[4];
+ }
+
+
 
 
 }]);	//end controller

@@ -26,7 +26,7 @@
 	<div id="page2" class="pages">
 		<h1 class="header">Meta</h1>
 			<div class="backgroundBlock">
-				<div ng-include="template.url">
+				<div ng-include="metatemplate.url">
 				<!-- first template needs to show the tierbuttons -->
 				<!-- need to call a new template when each tierbutton is clicked -->
 					
@@ -35,7 +35,9 @@
 		</div>
 	<div id="page3" class="pages">
 		<h1 class="header">Meta Foresight</h1>
-			<div class="backgroundBlock"></div>
+			<div class="backgroundBlock">
+				<div ng-include="foresighttemplate.url"></div>
+			</div>
 		</div>
 <div id="footer">
 	<p class="logotext">&copy;</p>
