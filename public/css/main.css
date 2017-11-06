@@ -297,19 +297,15 @@ button:hover {
 
 
 /*Media Query Boilerplate*/
-
+/* note: the js class is added dynamically by navappend in maincontroller.js ; */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
-and (min-width : 320px)
+and (min-width : 0px)
 and (max-width : 480px) {
 /* Styles */
 .js {
 	position: relative;
 	width: 100%;
-}
-
-.logotext {
-	display: none;
 }
 
 #menu {
@@ -332,10 +328,24 @@ li {
 }
 
 #nav ul li {
-	font-family: sans-serif;
+	text-align: center;
 	display: block;
 	position: relative;
 	width: 100%;
+}
+
+.navlinks {
+	display: none;
+}
+
+.navlinks.ng-hide { /* using reverse to "trick" angular since .navlinks is hidden at this viewport, once ng-hide is toggled it applies the ng-hide class and the hidden menu is shown */
+	display: block !important;
+}
+
+.tierbutton {
+	width: 50px;
+	height: 200px;
+	border: 10px solid red;
 }
 
 }
@@ -348,27 +358,13 @@ and (min-width : 321px) {
 
 }
 
-@media only screen
-and (min-width : 480px) {
-/* Styles */
-.js {
-	display: initial;
-}
-
-.logotext {
-	display: initial;
-}
-
-.navlinks {
-	display: initial;
-}
 
  
 /* Smartphones (portrait) ----------- */
 @media only screen
 and (max-width : 320px) {
 /* Styles */
-.js {
+/*.js {
 	position: relative;
 	width: 100%;
 }
@@ -386,7 +382,7 @@ ul {
 li {
 	width: 100%;
 	border-right: none;
-}
+}*/
 
 }
  
