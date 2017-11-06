@@ -123,6 +123,21 @@ for (const { button, page } of pages) {
  	$scope.metatemplate = $scope.metatemplates[4];
  }
 
+$scope.ftier1 = function() {
+	$scope.foresighttemplate = $scope.foresighttemplates[1];
+}
+
+$scope.ftier2 = function() {
+	$scope.foresighttemplate = $scope.foresighttemplates[2];
+}
+
+$scope.ftier3 = function() {
+	$scope.foresighttemplate = $scope.foresighttemplates[3];
+}
+
+$scope.ftier4 = function() {
+	$scope.foresighttemplate = $scope.foresighttemplates[4];
+}
 
 
 
