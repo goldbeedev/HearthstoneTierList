@@ -163,7 +163,7 @@ h1 {
 	background-color: rgba(0,0,0,0.5);
 	text-align: center;
 	width: 40%;
-	max-height: 300px;
+	height: 600px;
 	top: 15%;
 	left: 5%;
 	margin-left: 3.3%;
@@ -261,31 +261,36 @@ i.left {
 }
 
 .tierbutton h1 {
+	font-size: 12;
 	text-align: center;
 }
 
 #tier1 {
+	background-image: url("../images/hstone.png");
 	position: absolute;
-	top: 200px;
-	left: 30%;
+	top: 30px;
+	left: 5%;
 }
 
 #tier2 {
+	background-image: url("../images/hstone.png");
 	position: absolute;
-	top: 550px;
-	left: 30%;
+	top: 300px;
+	left: 5%;
 }
 
 #tier3 {
+	background-image: url("../images/hstone.png");
 	position: absolute;
-	top: 200px;
-	right: 30%;
+	top: 30px;
+	right: 5%;
 }
 
 #tier4 {
+	background-image: url("../images/hstone.png");
 	position: absolute;
-	top: 550px;
-	right: 30%;
+	top: 300px;
+	right: 5%;
 }
 
 button {
