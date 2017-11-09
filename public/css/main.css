@@ -164,10 +164,10 @@ h1 {
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
 	text-align: center;
-	width: 40%;
-	height: 600px;
+	width: 45%;
+	height: 700px;
 	top: 15%;
-	left: 5%;
+	left: 3%;
 	margin-left: 3.3%;
 	z-index: 1;
 }
@@ -179,6 +179,8 @@ h1 {
 	position: absolute;
 	display: block;
 	background-color: rgba(0,0,0,0.5);
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px;
 	text-align: center;
 	width: 40%;
 	height: 600px;
@@ -276,8 +278,8 @@ i.left {
 .tierbutton {
 	background-color: rgba(255,255,255,.2);
 	background-image: url("../images/hstone.png");
-	width: 200px;
-	height: 200px;
+	width: 180px;
+	height: 180px;
 	border: 3px solid black;
 	outline: rgba(255,255,255,.2) solid 1px;
 	outline-offset: -2px;
@@ -341,6 +343,19 @@ button:hover {
 and (min-width : 0px)
 and (max-width : 480px) {
 /* Styles */
+.backgroundblock {
+	width: 100%;
+	max-width: 100%;
+	left: 0;
+	right: 0;
+}
+
+.pageContentleft {
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+
 .js {
 	position: relative;
 	width: 100%;
