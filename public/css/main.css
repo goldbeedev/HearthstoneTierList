@@ -120,7 +120,7 @@ h1 {
 	z-index: 50;
 }
 
-.navlinks {
+.nav-links {
 	float: right;
 	padding: 0px;
 	margin: 0px;
@@ -140,13 +140,13 @@ h1 {
 	cursor: pointer;
 }
 
-.navlinks li a {
+.nav-links li a {
 	color: white;
 	text-align: center;
 	text-decoration: none;
 }
 
-.logotext {
+.logo-text {
 	font-family: 'Exo 2';
 	float: left;
 	color: white;
@@ -154,7 +154,7 @@ h1 {
 	margin: 0px;
 }
 
-.pageContentleft {
+.page-content-left {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
 	color: white;
@@ -172,7 +172,7 @@ h1 {
 	z-index: 1;
 }
 
-.pageContentright {
+.page-content-right {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
 	color: white;
@@ -190,7 +190,7 @@ h1 {
 	z-index: 1;
 }
 
-.pageContentcenter {
+.page-content-center {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
 	color: white;
@@ -263,7 +263,7 @@ i.left {
 	display: none;
 }
 
-.backgroundBlock {
+.background-block {
 	border: 1px solid black;
 	outline: rgba(255,255,255,.2) solid 1px;
 	outline-offset : -2px;
@@ -275,7 +275,7 @@ i.left {
 	height: 1000px;
 }
 
-.tierbutton {
+.tier-button {
 	background-color: rgba(255,255,255,.2);
 	background-image: url("../images/hstone.png");
 	width: 180px;
@@ -287,13 +287,13 @@ i.left {
     transition-duration: 0.4s;
 }
 
-.tierbutton:hover {
+.tier-button:hover {
 	opacity: .50;
 	color: black;
 	cursor: pointer;
 }
 
-.tierbutton h1 {
+.tier-button h1 {
 	font-size: 12;
 	text-align: center;
 }
@@ -343,17 +343,28 @@ button:hover {
 and (min-width : 0px)
 and (max-width : 480px) {
 /* Styles */
-.backgroundblock {
-	width: 100%;
+.background-block {
 	max-width: 100%;
-	left: 0;
-	right: 0;
+	left: 0%;
+	right: 0%;
 }
 
-.pageContentleft {
+.page-content-left {
+	left:0;
+	right: 0;
+	top: 0;
 	width: 100%;
+	height: 50%;
+	margin-left: 0;
+}
+
+.page-content-right {
+	top: 50%;
 	left: 0;
 	right: 0;
+	width: 100%;
+	height: 50%;
+	margin-left: 0;
 }
 
 .js {
@@ -387,18 +398,43 @@ li {
 	width: 100%;
 }
 
-.navlinks {
+.nav-links {
 	display: none;
 }
 
-.navlinks.ng-hide { /* using reverse to "trick" angular since .navlinks is hidden at this viewport, once ng-hide is toggled it applies the ng-hide class and the hidden menu is shown */
+.nav-links.ng-hide { /* using reverse to "trick" angular since .navlinks is hidden at this viewport, once ng-hide is toggled it applies the ng-hide class and the hidden menu is shown */
 	display: block !important;
 }
 
-.tierbutton {
-	width: 50px;
-	height: 200px;
-	border: 10px solid red;
+.tier-button {
+	left: 0%;
+	right: 0%;
+	width: 100%;
+	height: 125px;
+	border: none;
+}
+
+#tier1 {
+	left: 0%;
+	top: 0%;
+	position: absolute;
+}
+
+#tier2 {
+	left: 0%;
+	top: 125px;
+	position: absolute;
+}
+
+#tier3 {
+	top: 250px;
+	position: absolute;
+}
+
+#tier4 {
+	top: 375px;
+	position: absolute;
+	float: right;
 }
 
 }
