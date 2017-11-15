@@ -355,6 +355,15 @@ button:hover {
 	text-shadow: 5px 5px 8px #000000
 }
 
+.tier-deck {
+	left: 0%;
+	right: 0%;
+	width: 100%;
+	height: 125px;
+	border: none;
+	background-image: url(../images/anduin-banner.jpg);
+}
+
 /*Media Query Boilerplate*/
 /* note: the js class is added dynamically by navappend in maincontroller.js ; */
 /* Smartphones (portrait and landscape) ----------- */
