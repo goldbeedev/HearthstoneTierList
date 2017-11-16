@@ -93,6 +93,7 @@ for (const { button, page } of pages) {
      { name: 'tier2', url: 'templates/tier2.html'},
      { name: 'tier3', url: 'templates/tier3.html'},
      { name: 'tier4', url: 'templates/tier4.html'}];
+
  $scope.metatemplate = $scope.metatemplates[0];
 
 
@@ -102,44 +103,23 @@ for (const { button, page } of pages) {
  	 { name: 'ftier2', url: 'templates/ftier2.html'},
  	 { name: 'ftier3', url: 'templates/ftier3.html'},
  	 { name: 'ftier4', url: 'templates/ftier4.html'}]
+ 
  $scope.foresighttemplate = $scope.foresighttemplates[0];
 
  //tier 1 function to change the template
 //come up with more efficient solution for this
 
- $scope.tier1 = function() {
- 	$scope.metatemplate = $scope.metatemplates[1];
- }
+$scope.metaPath = $scope.metatemplate.url;
 
- $scope.tier2 = function() {
- 	$scope.metatemplate = $scope.metatemplates[2];
- }
+$scope.forePath	= $scope.foresighttemplate.url;
 
- $scope.tier3 = function() {
- 	$scope.metatemplate = $scope.metatemplates[3];
- }
-
- $scope.tier4 = function() {
- 	$scope.metatemplate = $scope.metatemplates[4];
- }
-
-$scope.ftier1 = function() {
-	$scope.foresighttemplate = $scope.foresighttemplates[1];
+$scope.nav = function(path) {
+	$scope.metaPath = path;
 }
 
-$scope.ftier2 = function() {
-	$scope.foresighttemplate = $scope.foresighttemplates[2];
+$scope.nav2 = function(path) {
+	$scope.forePath = path;
 }
-
-$scope.ftier3 = function() {
-	$scope.foresighttemplate = $scope.foresighttemplates[3];
-}
-
-$scope.ftier4 = function() {
-	$scope.foresighttemplate = $scope.foresighttemplates[4];
-}
-
-
 
 }]);	//end controller
 })(); //end self invoked function
