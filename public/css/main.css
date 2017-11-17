@@ -360,9 +360,47 @@ button:hover {
 	right: 0%;
 	width: 100%;
 	height: 125px;
-	border: none;
-	background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.40)), url(../images/anduin-banner.jpg) no-repeat right;
+	border: 1px solid black;
 }
+
+/* tier deck logos */
+
+.tier-deck.priest {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/anduin-banner.jpg) no-repeat left;
+}
+
+.tier-deck.paladin {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/uther-banner.jpg) no-repeat right;
+}
+
+.tier-deck.rogue {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/valeera-banner.jpg) no-repeat right;
+}
+
+.tier-deck.shaman {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/thrall-banner.jpg) no-repeat right;
+}
+
+.tier-deck.warrior {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/garrosh-banner.jpg) no-repeat right;
+}
+
+.tier-deck.warlock {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/guldan-banner.jpg) no-repeat right;
+}
+
+.tier-deck.hunter {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/rexxar-banner.jpg) no-repeat right;
+}
+
+.tier-deck.mage {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/jaina-banner.jpg) no-repeat right;
+}
+
+.tier-deck.druid {
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/malfurion-banner.jpg) no-repeat right;
+}
+
 
 /*Media Query Boilerplate*/
 /* note: the js class is added dynamically by navappend in maincontroller.js ; */
