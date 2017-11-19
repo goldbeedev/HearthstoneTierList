@@ -361,7 +361,10 @@ button:hover {
 	width: 100%;
 	height: 125px;
 	border: 1px solid black;
+	transition: 1s;
 }
+
+
 
 /* tier deck logos */
 
@@ -370,35 +373,48 @@ button:hover {
 }
 
 .tier-deck.paladin {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/uther-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/uther-banner.jpg) no-repeat left;
 }
 
 .tier-deck.rogue {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/valeera-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/valeera-banner.jpg) no-repeat left;
 }
 
 .tier-deck.shaman {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/thrall-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/thrall-banner.jpg) no-repeat left;
 }
 
 .tier-deck.warrior {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/garrosh-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/garrosh-banner.jpg) no-repeat left;
 }
 
 .tier-deck.warlock {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/guldan-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/guldan-banner.jpg) no-repeat left;
 }
 
 .tier-deck.hunter {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/rexxar-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/rexxar-banner.jpg) no-repeat left;
 }
 
 .tier-deck.mage {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/jaina-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/jaina-banner.jpg) no-repeat left;
 }
 
 .tier-deck.druid {
-	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/malfurion-banner.jpg) no-repeat right;
+	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/malfurion-banner.jpg) no-repeat left;
+}
+
+.tier-deck:hover {
+	transition: 1s;
+	background-position: right;
+}
+
+.arch-text {
+	font-size: 32px;
+	color: black;
+	text-shadow: 5px 5px 8px #0000ff;
+	font-family: 'Roboto Condensed';
+	text-align: left;
 }
 
 
