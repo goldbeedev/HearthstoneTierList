@@ -94,9 +94,14 @@ for (const { button, page } of pages) {
      { name: 'tier3', url: 'templates/tier3.html'},
      { name: 'tier4', url: 'templates/tier4.html'}];
 
- $scope.metatemplate = $scope.metatemplates[0];
+//templates for tier deck window
+ $scope.tierdecks =
+ 	[{ name: 'tier1deck1', url: 'templates/tier1deck1.html'},
+     { name: 'tier1deck2', url: 'templates/tier1deck2.html'},
+     { name: 'tier1deck3', url: 'templates/tier1deck3.html'},
+     { name: 'tier1deck4', url: 'templates/tier1deck4.html'}];
 
-
+//templates for foresight page
  $scope.foresighttemplates = 
  	[{ name: 'foresightmain', url: 'templates/metaforesight.html'},
  	 { name: 'ftier1', url: 'templates/ftier1.html'},
@@ -104,19 +109,25 @@ for (const { button, page } of pages) {
  	 { name: 'ftier3', url: 'templates/ftier3.html'},
  	 { name: 'ftier4', url: 'templates/ftier4.html'}]
  
+ //set initial meta and foresight view.
+ $scope.metatemplate = $scope.metatemplates[0];
  $scope.foresighttemplate = $scope.foresighttemplates[0];
 
  //tier 1 function to change the template
 //come up with more efficient solution for this
 
+//"meta" page template path, starts out at meta main, and changes based on scope.nav function
 $scope.metaPath = $scope.metatemplate.url;
-
+//"metaforesight" page template path, starts out at foresightmain, and changes based on scope.nav2 function
 $scope.forePath	= $scope.foresighttemplate.url;
+//"tierdecks" template, initial path
 
+//function to change the meta page
 $scope.nav = function(path) {
 	$scope.metaPath = path;
 }
 
+//function to change the foresight page
 $scope.nav2 = function(path) {
 	$scope.forePath = path;
 }

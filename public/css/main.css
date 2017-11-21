@@ -190,7 +190,7 @@ h1 {
 	z-index: 1;
 }
 
-.page-content-center {
+.page-content-deck {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
 	color: white;
@@ -198,11 +198,11 @@ h1 {
 	display: block;
 	background-color: rgba(0,0,0,0.5);
 	text-align: center;
-	width: 40%;
+	width: 95%;
 	height: 600px;
 	top: 15%;
-	right: 30%;
-	margin-left: 3.3%;
+	left: 2.5%;
+	right: 2.5%;
 	z-index: 1;
 }
 
