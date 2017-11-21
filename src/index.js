@@ -2,9 +2,14 @@
 //load modules
 var express = require('express'),
   bodyParser = require('body-parser'),
-  path = require('path');
+  path = require('path'),
+  unirest = require('unirest');
 
-
+unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
+.header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
+.end(function (result) {
+  console.log(result.status, result.headers, result.body);
+});
 
 
 
