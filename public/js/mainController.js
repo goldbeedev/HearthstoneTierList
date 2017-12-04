@@ -65,25 +65,37 @@ for (const { button, page } of pages) {
 //templates for the meta page.
  $scope.metatemplates =
     [{ name: 'metamain', url: 'templates/metamain.html'},
-     { name: 'tier1', url: 'templates/tier1.html'},
-     { name: 'tier2', url: 'templates/tier2.html'},
-     { name: 'tier3', url: 'templates/tier3.html'},
-     { name: 'tier4', url: 'templates/tier4.html'}];
+     { name: 'tier1', url: 'templates/tier/tier1.html'},
+     { name: 'tier2', url: 'templates/tier/tier2.html'},
+     { name: 'tier3', url: 'templates/tier/tier3.html'},
+     { name: 'tier4', url: 'templates/tier/tier4.html'}];
 
 //templates for tier deck window
  $scope.tierdecks =
- 	[{ name: 'tier1deck1', url: 'templates/tier1deck1.html'},
-     { name: 'tier1deck2', url: 'templates/tier1deck2.html'},
-     { name: 'tier1deck3', url: 'templates/tier1deck3.html'},
-     { name: 'tier1deck4', url: 'templates/tier1deck4.html'}];
+ 	[{ name: 'tier1deck1', url: 'templates/tier/decks/tier1deck1.html'},
+     { name: 'tier1deck2', url: 'templates/tier/decks/tier1deck2.html'},
+     { name: 'tier1deck3', url: 'templates/tier/decks/tier1deck3.html'},
+     { name: 'tier1deck4', url: 'templates/tier/decks/tier1deck4.html'},
+     { name: 'tier2deck1', url: 'templates/tier/decks/tier1deck1.html'},
+     { name: 'tier2deck2', url: 'templates/tier/decks/tier1deck2.html'},
+     { name: 'tier2deck3', url: 'templates/tier/decks/tier1deck3.html'},
+     { name: 'tier2deck4', url: 'templates/tier/decks/tier1deck4.html'},
+     { name: 'tier3deck1', url: 'templates/tier/decks/tier1deck1.html'},
+     { name: 'tier3deck2', url: 'templates/tier/decks/tier1deck2.html'},
+     { name: 'tier3deck3', url: 'templates/tier/decks/tier1deck3.html'},
+     { name: 'tier3deck4', url: 'templates/tier/decks/tier1deck4.html'},
+     { name: 'tier4deck1', url: 'templates/tier/decks/tier1deck1.html'},
+     { name: 'tier4deck2', url: 'templates/tier/decks/tier1deck2.html'},
+     { name: 'tier4deck3', url: 'templates/tier/decks/tier1deck3.html'},
+     { name: 'tier4deck4', url: 'templates/tier/decks/tier1deck4.html'}];
 
 //templates for foresight page
  $scope.foresighttemplates = 
  	[{ name: 'foresightmain', url: 'templates/metaforesight.html'},
- 	 { name: 'ftier1', url: 'templates/ftier1.html'},
- 	 { name: 'ftier2', url: 'templates/ftier2.html'},
- 	 { name: 'ftier3', url: 'templates/ftier3.html'},
- 	 { name: 'ftier4', url: 'templates/ftier4.html'}]
+ 	 { name: 'ftier1', url: 'templates/ftier/ftier1.html'},
+ 	 { name: 'ftier2', url: 'templates/ftier/ftier2.html'},
+ 	 { name: 'ftier3', url: 'templates/ftier/ftier3.html'},
+ 	 { name: 'ftier4', url: 'templates/ftier/ftier4.html'}]
  
  //set initial meta and foresight view.
  $scope.metatemplate = $scope.metatemplates[0];
