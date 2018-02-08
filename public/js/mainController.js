@@ -18,13 +18,12 @@ function navAppend() {
 
 $scope.anotherAPICall = function(){
 
-unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
-.header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
-.end(function (result) {
-  console.log(result.status, result.headers, result.body);
+$http.get('/my-data-endpoint')
+     .then((response) => {
+    console.log(response);
+  });
 
-});
-} //end anotherAPICall
+}; //end anotherAPICall
 
 
 

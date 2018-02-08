@@ -5,12 +5,6 @@ var express = require('express'),
   path = require('path'),
   unirest = require('unirest');
 
-unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
-.header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
-.end(function (result) {
-  console.log(result.status, result.headers, result.body);
-});
-
 
 
 var app = express();
@@ -19,6 +13,15 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 5000;
 
 app.use('/', express.static('public'));
+
+app.get('/my-data-endpoint', (req, res) => {
+  unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
+    .header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
+    .end((result) => {
+      console.log(result.status, result.headers, result.body);
+      res.send(result);
+    });
+});
 
 // vendor scripts
 app.get('/vendor/angular.js', function(req, res) {

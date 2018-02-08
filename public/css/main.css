@@ -2,6 +2,8 @@
 	border: 2px solid red;
 }*/
 
+/** 3 page single page styling **/
+
 #page1 {
    position: relative;
 }
@@ -52,18 +54,7 @@
     z-index: -1;
 }
 
-/*#page1 {
-	background: url('../images/warrior.jpg') no-repeat center center fixed;
-}*/
 
-/*#page2 {
-	background: url('../images/dr-boom.jpg') no-repeat center center fixed;
-}
-*/
-/*#page3 {
-	background: url('../images/thrall.jpg') no-repeat center center fixed;
-}
-*/
 .pages {
 	height: 1200px;
     -webkit-background-size: cover;
@@ -79,7 +70,7 @@ body {
 	width: 100%;
 }
 
-
+/** Nav Styling **/
 
 #nav {
 	outline: rgba(255,255,255,.2) solid 1px;
@@ -98,17 +89,6 @@ body {
 #nav ul li:hover{
 	opacity: .25;
 	color: black;
-}
-
-
-h1 {
-	font-family: 'Exo 2';
-	color: white;
-	font-size: 12;
-	text-shadow: 5px 5px 8px #000000;
-	margin: 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
 }
 
 #nav {
@@ -154,6 +134,18 @@ h1 {
 	margin: 0px;
 }
 
+/** General Content Styling **/
+
+h1 {
+	font-family: 'Exo 2';
+	color: white;
+	font-size: 12;
+	text-shadow: 5px 5px 8px #000000;
+	margin: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 .page-content-left {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
@@ -165,12 +157,12 @@ h1 {
 	outline-offset: 2px;
 	text-align: center;
 	width: 45%;
-	height: 700px;
-	top: 15%;
+	min-height: 500px;
+	top: 10%;
 	left: 3%;
-	margin-left: 3.3%;
 	z-index: 1;
 }
+
 
 .page-content-right {
 	font-family: 'Roboto Condensed';
@@ -183,10 +175,9 @@ h1 {
 	outline-offset: 2px;
 	text-align: center;
 	width: 40%;
-	height: 600px;
-	top: 15%;
-	right: 5%;
-	margin-left: 3.3%;
+	min-height: 400px;
+	top: 10%;
+	right: 3%;
 	z-index: 1;
 }
 
@@ -265,15 +256,17 @@ i.left {
 
 .background-block {
 	border: 1px solid black;
+	right: 5%;
+	height: 1000px;
 	outline: rgba(255,255,255,.2) solid 1px;
 	outline-offset : -2px;
 	position: absolute;
 	background-color: rgba(0,0,0,0.3);
 	max-width: 90%;
 	left: 5%;
-	right: 5%;
-	height: 1000px;
 }
+
+/** Tier Sections and Buttons **/
 
 .tier-button {
 	background-color: rgba(255,255,255,.2);
@@ -335,14 +328,36 @@ button:hover {
     color: white;
 }
 
+/** decklist stuff **/
+
+.quantity {
+	float: left;
+	border: 1px solid #000;
+}
+
 .archetype {
-	position: absolute;
-	top: 7.5%;
-	left: 20%;
+	position: relative;
+	margin-bottom: 30px;
+	text-align: center;
 	font-family: 'Roboto Condensed';
 	font-size: 26px;
 	color: white;
 	text-shadow: 5px 5px 8px #000000
+}
+
+.decklist {
+	list-style: none;
+	min-width: 100px;
+	padding: 0;
+
+
+}
+
+.decklist li {
+	text-align: center;
+	background-color: rgba(44,53,57,0.3);
+	border: 1px solid black;
+	width: 100%;
 }
 
 .decklists {
@@ -363,7 +378,6 @@ button:hover {
 	border: 1px solid black;
 	transition: 1s;
 }
-
 
 
 /* tier deck logos */
