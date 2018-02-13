@@ -146,6 +146,12 @@ h1 {
 	padding-bottom: 25px;
 }
 
+.about-banner {
+	background: url('../images/brm-logo.jpg') no-repeat center;
+	width: 350px;
+	height: 183px;
+}
+
 .page-content-left {
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
@@ -202,9 +208,28 @@ h1 {
 }
 
 #footer {
+	border: 1px solid black;
 	background-color: black;
-	height: 50px;
+	height: 35px;
+	padding-top: 0px;
 }
+
+.footer-disclaimer {
+	margin-top: 0px;
+	font-family: 'Roboto Condensed';
+	font-size: 11px;
+	color: white;
+	text-align: center;
+}
+
+.copy-text {
+	font-family: 'Exo 2';
+	float: left;
+	color: white;
+	font-size: 20px;
+	margin: 0px;
+}
+
 
 i.right {
 	border-top-right-radius: 10px;
