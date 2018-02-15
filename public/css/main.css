@@ -161,10 +161,18 @@ h1 {
 .about-text {
 	background-color: rgba(0,0,0,0.5);
 	position: relative;
-	width: 400px;
+	margin: 45px auto;
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px;
+}
+
+.tier-text {
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
 	margin: 50px auto;
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
+	font-size: 16px;
 }
 
 .page-content-left {
@@ -366,6 +374,18 @@ button {
 button:hover {
      /* black */
     color: white;
+}
+
+.back-button {
+	position: absolute;
+	top: 30px;
+	font-family: 'Exo 2';
+	color: white;
+	font-size: 12;
+	text-shadow: 5px 5px 8px #000000;
+	margin: 0px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 /** decklist stuff **/
