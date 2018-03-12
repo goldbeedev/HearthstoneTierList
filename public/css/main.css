@@ -152,7 +152,7 @@ h1 {
 	margin: 0 auto;
 	margin-bottom: 10px;
 	position: relative;
-	width: 400px;
+	max-width: 400px;
 	height: 209px;
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
@@ -173,6 +173,8 @@ h1 {
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
 	font-size: 16px;
+	list-style-type: none;
+	padding: 0;
 }
 
 .page-content-left {
@@ -305,7 +307,7 @@ i.left {
 .background-block {
 	border: 1px solid black;
 	right: 5%;
-	height: 1000px;
+	min-height: 1000px;
 	outline: rgba(255,255,255,.2) solid 1px;
 	outline-offset : -2px;
 	position: absolute;
@@ -416,8 +418,6 @@ button:hover {
 	list-style: none;
 	min-width: 100px;
 	padding: 0;
-
-
 }
 
 .decklist li {
@@ -513,22 +513,42 @@ and (max-width : 480px) {
 }
 
 .page-content-left {
-	left:0;
-	right: 0;
-	top: 0;
-	width: 100%;
-	height: 50%;
-	margin-left: 0;
+	max-height: 300px;
+	position: relative;
+	float: none;
+	width: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	left: 0;
 }
 
+.page-content-left::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0,0,0,0.5);
+} 
+
+.page-content-left::-webkit-scrollbar-thumb {
+    background-color: #F8F8FF;
+} 
+
 .page-content-right {
-	top: 50%;
-	left: 0;
+	max-height: 300px;
+	position: relative;
+	float: none;
+	width: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	right: 0;
-	width: 100%;
-	height: 50%;
-	margin-left: 0;
 }
+
+.page-content-right::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0,0,0,0.5);
+} 
+
+.page-content-right::-webkit-scrollbar-thumb {
+    background-color: #F8F8FF;
+} 
 
 .js {
 	position: relative;
