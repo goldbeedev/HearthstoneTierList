@@ -390,11 +390,18 @@ button:hover {
 	padding-bottom: 25px;
 }
 
+.back-button:hover {
+	cursor: pointer;
+	opacity: .75;
+	color: black;
+}
+
 /** decklist stuff **/
 
 .mana {
 	float: left;
 	border: 1px solid #000;
+	background-color: rgba(0,0,139,.7);
 }
 
 .quantity {
@@ -435,6 +442,34 @@ button:hover {
 	font-size: 26px;
 	color: white;
 	text-shadow: 5px 5px 8px #000000
+}
+
+.weak-list-deck {
+	color: white;
+	font-size: 12;
+	text-shadow: 5px 5px 8px #000000;
+	list-style-type: none;
+	padding: 0;
+}
+
+.weak-list-deck:hover {
+	cursor: pointer;
+	opacity: .75;
+	color: black;
+}
+
+.strong-list-deck {
+	color: white;
+	font-size: 12;
+	text-shadow: 5px 5px 8px #000000;
+	list-style-type: none;
+	padding: 0;
+}
+
+.strong-list-deck:hover {
+	cursor: pointer;
+	opacity: .75;
+	color: black;
 }
 
 .tier-deck {

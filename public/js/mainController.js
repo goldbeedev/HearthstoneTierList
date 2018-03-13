@@ -75,18 +75,18 @@ for (const { button, page } of pages) {
      { name: 'tier1deck2', url: 'templates/tier/decks/tier1deck2.html'},
      { name: 'tier1deck3', url: 'templates/tier/decks/tier1deck3.html'},
      { name: 'tier1deck4', url: 'templates/tier/decks/tier1deck4.html'},
-     { name: 'tier2deck1', url: 'templates/tier/decks/tier1deck1.html'},
-     { name: 'tier2deck2', url: 'templates/tier/decks/tier1deck2.html'},
-     { name: 'tier2deck3', url: 'templates/tier/decks/tier1deck3.html'},
-     { name: 'tier2deck4', url: 'templates/tier/decks/tier1deck4.html'},
-     { name: 'tier3deck1', url: 'templates/tier/decks/tier1deck1.html'},
-     { name: 'tier3deck2', url: 'templates/tier/decks/tier1deck2.html'},
-     { name: 'tier3deck3', url: 'templates/tier/decks/tier1deck3.html'},
-     { name: 'tier3deck4', url: 'templates/tier/decks/tier1deck4.html'},
-     { name: 'tier4deck1', url: 'templates/tier/decks/tier1deck1.html'},
-     { name: 'tier4deck2', url: 'templates/tier/decks/tier1deck2.html'},
-     { name: 'tier4deck3', url: 'templates/tier/decks/tier1deck3.html'},
-     { name: 'tier4deck4', url: 'templates/tier/decks/tier1deck4.html'}];
+     { name: 'tier2deck1', url: 'templates/tier/decks/tier2deck1.html'},
+     { name: 'tier2deck2', url: 'templates/tier/decks/tier2deck2.html'},
+     { name: 'tier2deck3', url: 'templates/tier/decks/tier2deck3.html'},
+     { name: 'tier2deck4', url: 'templates/tier/decks/tier2deck4.html'},
+     { name: 'tier3deck1', url: 'templates/tier/decks/tier3deck1.html'},
+     { name: 'tier3deck2', url: 'templates/tier/decks/tier3deck2.html'},
+     { name: 'tier3deck3', url: 'templates/tier/decks/tier3deck3.html'},
+     { name: 'tier3deck4', url: 'templates/tier/decks/tier3deck4.html'},
+     { name: 'tier4deck1', url: 'templates/tier/decks/tier4deck1.html'},
+     { name: 'tier4deck2', url: 'templates/tier/decks/tier4deck2.html'},
+     { name: 'tier4deck3', url: 'templates/tier/decks/tier4deck3.html'},
+     { name: 'tier4deck4', url: 'templates/tier/decks/tier4deck4.html'}];
 
 //templates for foresight page
  $scope.foresighttemplates = 
