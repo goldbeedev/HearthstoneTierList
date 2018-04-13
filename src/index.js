@@ -3,9 +3,10 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   path = require('path'),
-  unirest = require('unirest');
+  unirest = require('unirest'),
+  decode = require('deckstrings').decode;
 
-
+//loop through decklists to decode and push to an array?
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,6 +22,15 @@ app.get('/my-data-endpoint', (req, res) => {
       console.log(result.status, result.headers, result.body);
       res.send(result);
     });
+});
+
+app.get('/decks', function(req, res) {
+    var dstrings = ["AAECAf0GBJ3iAtvpApfTAuCsAg340ALy0ALexALnywKKAbYHiNICi+EC9wSTBPzlAujnAuEHAA==", "AAECAf0EBpvTAqPrAsUE0ALCwwLKwQIM7AeWxwLJA9fhAs7yAk238QLKwwLV 4QKKAevCAqsEAA=="];
+    var decoded = [];
+    for (var i = 0; i<dstrings.length; i++){
+      decoded.push(decode(dstrings[i]));
+    }
+    res.send(console.log(decoded[0]));
 });
 
 // vendor scripts

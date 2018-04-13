@@ -2,6 +2,7 @@
 'use strict'
 
 
+
 //initialize the angular module
 angular.module('app')
 .controller('mainController', ['$scope', '$location', '$http', '$log', function($scope, $location, $http, $log){
@@ -16,14 +17,26 @@ function navAppend() {
 
 } //end function navAppend
 
-$scope.anotherAPICall = function(){
+//get all of the cards from the hearthstone API or maybe just get cards by DBFID from the decks endpoint?
+
+//once the correct logic is used, push each deck of cards into an array for listing purposes (loop through and dynamically generate the deck lists) 
 
 $http.get('/my-data-endpoint')
+     .then((response) => {
+    console.log(response.body[0]);
+  });
+
+//end anotherAPICall
+
+
+
+$http.get('/decks')
      .then((response) => {
     console.log(response);
   });
 
-}; //end anotherAPICall
+
+
 
 
 
@@ -36,7 +49,8 @@ $http.get('/my-data-endpoint')
 //Fix smoothscroll stuff
 //Make gallery arrows hidden until rover is selected (maybe add fade effects?).
 //style the fuckin site!
-
+//write function that displays card data, make the api call 1 time, and show the card in the same spot with mouseover, 
+//the way we select the card is by using a bidirectional angular hook with some part of the data returned and the card name.
 
 
 navAppend(); //calling navAppend for media query mobile optimization.
@@ -118,6 +132,15 @@ $scope.nav = function(path) {
 $scope.nav2 = function(path) {
 	$scope.forePath = path;
 }
+
+const deck = {
+    cards: [[1, 2], [2, 2], [3, 2], [4, 1]],
+    heroes: [7],
+    format: 1,
+};
+
+
+
 
 }]);	//end controller
 })(); //end self invoked function

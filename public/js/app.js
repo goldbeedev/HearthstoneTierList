@@ -2,6 +2,10 @@
 
 'use strict';
 
+
+
+
+
 //instantiate angular app and setup config for template routes
 angular
 .module('app', ['ngRoute','ngAnimate'])
@@ -22,5 +26,10 @@ function config($routeProvider, $locationProvider) {
 });
 
 
+
+
 } //end function config
+
+
+
 })(); //end self invoking function.
