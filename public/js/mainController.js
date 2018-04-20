@@ -10,6 +10,12 @@ angular.module('app')
 //set location to equal $location for data binding on the template
 $scope.$location = $location;
 
+//setup deck variables
+var testdecks;
+var allcards;
+var matching = [];
+var decksobject = [];
+
 //append function to append class that hides the nav links for responsive design.
 function navAppend() {
 	var navlinks = angular.element(document.querySelector('.navlinks'));
@@ -21,19 +27,82 @@ function navAppend() {
 
 //once the correct logic is used, push each deck of cards into an array for listing purposes (loop through and dynamically generate the deck lists) 
 
-$http.get('/my-data-endpoint')
+//get the decks endpoint, this will get the converted deck codes and set the response.data to the testdecks variable.
+$http.get('/decks')
      .then((response) => {
-    console.log(response.body[0]);
+    testdecks = response.data;
+    console.log(testdecks);
+    console.log(testdecks[0].cards.length);
+  //get the cards index with the most index values 
   });
+
+
+
+
+// $http.get('/my-data-endpoint') 
+//      .then((response) => {
+//         //parse the cards to use the data?
+//     var basic = response.data.body.Basic;
+//     var all = response.data.body;
+//     console.log(all);
+//     console.log(basic);
+//     for (var i = 0; i < all.length; i++) {
+//         console.log(all.Basic[i]);
+//     }
+//     console.log("these are the test decks" + JSON.stringify(testdecks[0].cards));
+//   });
+
+//get the my-data-endpoint, this gets all the cards from the 
+$http.get('/my-data-endpoint') 
+     .then((response) => {
+     console.log(response.data.body);
+     //store all the cards in a variable
+
+     //variable for each decks length in the function so we can push results to an object once each has been iterated through.
+     // var arrlen = testdecks[i].cards.length;
+
+     allcards = response.data.body;
+     console.log(allcards[0].dbfId);
+     
+     for (var i = 0; i < testdecks.length; i++) {
+       for (var y = 0; y < testdecks[i].cards.length; y++) {       //loop through the cards inside the test decks array - need to come up with a way to push the cards after each deck!
+            console.log(testdecks[i].cards.length);
+        for (var x = 0; x < allcards.length; x++) {  //looop through all the cards in our api and check if their dbfId matches the decoded ones in test decks!
+            
+            if (testdecks[i].cards[y][0] === allcards[x].dbfId) {
+                matching.push([allcards[x].name, allcards[x].cost]); //maybe push an array of objects with properties?
+                //loop through each deck, and push the deck once you have looped through!
+                //how do we check after each card if it has seen all of the indexes in that array?
+            } //end if testdecks
+            var arrlen = testdecks[i].cards.length;
+
+            
+            //when we finish looping through an array of cards, push them to an object labeled as such
+            //if the length of the array is equal to the cards index value + 1 (so the first deck would be 17) do something.
+            //end if arrlen
+        } //end for loop
+        if (arrlen === y + 1) {
+                decksobject.push(matching);
+                matching = [];
+            } 
+       } //end for loop
+    } //end for loop
+console.log(matching);
+console.log(decksobject);
+console.log(decksobject.length);
+  }); //end then response function
+
+// function lookforcard(testdecks, allcards) {
+    
+// }
+
+// lookforcard(testdecks, allcards);
 
 //end anotherAPICall
 
 
 
-$http.get('/decks')
-     .then((response) => {
-    console.log(response);
-  });
+
 
 
 
@@ -133,11 +202,6 @@ $scope.nav2 = function(path) {
 	$scope.forePath = path;
 }
 
-const deck = {
-    cards: [[1, 2], [2, 2], [3, 2], [4, 1]],
-    heroes: [7],
-    format: 1,
-};
 
 
 

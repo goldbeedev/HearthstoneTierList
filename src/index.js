@@ -15,14 +15,24 @@ var port = process.env.PORT || 5000;
 
 app.use('/', express.static('public'));
 
+// app.get('/my-data-endpoint', (req, res) => {
+//   unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
+//     .header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
+//     .end((result) => {
+//       console.log(result.status, result.headers, result.body);
+//       res.send(result);
+//     });
+// });
+
 app.get('/my-data-endpoint', (req, res) => {
-  unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards")
-    .header("X-Mashape-Key", "0mmzJID0EImshKziZ9xGioPEVT3Sp1ueyDmjsn0PakOxETKmIn")
+  unirest.get("https://api.hearthstonejson.com/v1/23966/enUS/cards.collectible.json")
     .end((result) => {
       console.log(result.status, result.headers, result.body);
       res.send(result);
     });
 });
+
+https://api.hearthstonejson.com/v1/23966/enUS/cards.collectible.json
 
 app.get('/decks', function(req, res) {
     var dstrings = ["AAECAf0GBJ3iAtvpApfTAuCsAg340ALy0ALexALnywKKAbYHiNICi+EC9wSTBPzlAujnAuEHAA==", "AAECAf0EBpvTAqPrAsUE0ALCwwLKwQIM7AeWxwLJA9fhAs7yAk238QLKwwLV 4QKKAevCAqsEAA=="];
@@ -30,7 +40,7 @@ app.get('/decks', function(req, res) {
     for (var i = 0; i<dstrings.length; i++){
       decoded.push(decode(dstrings[i]));
     }
-    res.send(console.log(decoded[0]));
+    res.send(decoded);
 });
 
 // vendor scripts
