@@ -14,7 +14,10 @@ $scope.$location = $location;
 var testdecks;
 var allcards;
 var matching = [];
-var decksobject = [];
+$scope.decksobject = [];
+var currentDeck;
+//store the html structure for the cards lists.
+var deckhtml;
 
 //append function to append class that hides the nav links for responsive design.
 function navAppend() {
@@ -36,22 +39,6 @@ $http.get('/decks')
   //get the cards index with the most index values 
   });
 
-
-
-
-// $http.get('/my-data-endpoint') 
-//      .then((response) => {
-//         //parse the cards to use the data?
-//     var basic = response.data.body.Basic;
-//     var all = response.data.body;
-//     console.log(all);
-//     console.log(basic);
-//     for (var i = 0; i < all.length; i++) {
-//         console.log(all.Basic[i]);
-//     }
-//     console.log("these are the test decks" + JSON.stringify(testdecks[0].cards));
-//   });
-
 //get the my-data-endpoint, this gets all the cards from the 
 $http.get('/my-data-endpoint') 
      .then((response) => {
@@ -70,7 +57,7 @@ $http.get('/my-data-endpoint')
         for (var x = 0; x < allcards.length; x++) {  //looop through all the cards in our api and check if their dbfId matches the decoded ones in test decks!
             
             if (testdecks[i].cards[y][0] === allcards[x].dbfId) {
-                matching.push([allcards[x].name, allcards[x].cost]); //maybe push an array of objects with properties?
+                matching.push({name: allcards[x].name, cost: allcards[x].cost}); //maybe push an array of objects with properties?
                 //loop through each deck, and push the deck once you have looped through!
                 //how do we check after each card if it has seen all of the indexes in that array?
             } //end if testdecks
@@ -82,32 +69,15 @@ $http.get('/my-data-endpoint')
             //end if arrlen
         } //end for loop
         if (arrlen === y + 1) {
-                decksobject.push(matching);
+                $scope.decksobject.push(matching);
                 matching = [];
             } 
        } //end for loop
     } //end for loop
 console.log(matching);
-console.log(decksobject);
-console.log(decksobject.length);
+console.log($scope.decksobject);
+console.log($scope.decksobject.length);
   }); //end then response function
-
-// function lookforcard(testdecks, allcards) {
-    
-// }
-
-// lookforcard(testdecks, allcards);
-
-//end anotherAPICall
-
-
-
-
-
-
-
-
-
 
 //***********************************************************
 //***********************************************************
@@ -192,6 +162,12 @@ $scope.metaPath = $scope.metatemplate.url;
 $scope.forePath	= $scope.foresighttemplate.url;
 //"tierdecks" template, initial path
 
+//function to build decks into html from the decoded decks arrays.
+$scope.deckBuild = function() {
+    angular.element(decklist).html('<p>testing</p>');
+}
+
+
 //function to change the meta page
 $scope.nav = function(path) {
 	$scope.metaPath = path;
@@ -201,6 +177,9 @@ $scope.nav = function(path) {
 $scope.nav2 = function(path) {
 	$scope.forePath = path;
 }
+
+// store the current clicked deck 
+$scope.currentDeck ='';
 
 
 

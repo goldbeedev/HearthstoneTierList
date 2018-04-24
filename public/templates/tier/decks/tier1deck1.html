@@ -4,25 +4,8 @@
 			<h3 class="header">Standard Decklist</h3>
 
 			<!-- create a function that can edit the decklist provided to have the mana and QTY on it, maybe a loop with adding HTML? -->
-				<ul class="decklist">
-					<li><span class="mana">1</span>Dark Pact<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Kobold Librarian<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Mistress of Mixtures<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Defile<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Doomsayer<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Prince Taldaram<span class="quantity">1</span></li>
-					<li><span class="mana">4</span>Hellfire<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Lesser Amethyst Spellstone<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Carnivorous Cube<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Doomguard<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Faceless Manipulator<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Possessed Lackey<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Skull of the Man'ari<span class="quantity">1</span></li>
-					<li><span class="mana">9</span>Voidlord<span class="quantity">2</span></li>
-					<li><span class="mana">10</span>Bloodreaver Gul'dan<span class="quantity">1</span></li>
-					<li><span class="mana">10</span>N'Zoth the Corruptor<span class="quantity">1</span></li>
-					<li><span class="mana">12</span>Mountain Giant<span class="quantity">2</span></li>
-
+				<ul>
+					<li ng-repeat="x in decksobject[0]">{{x.name}}</li>
 				
 				</ul>
 		</div>
