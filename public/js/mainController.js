@@ -57,7 +57,7 @@ $http.get('/my-data-endpoint')
         for (var x = 0; x < allcards.length; x++) {  //looop through all the cards in our api and check if their dbfId matches the decoded ones in test decks!
             
             if (testdecks[i].cards[y][0] === allcards[x].dbfId) {
-                matching.push({name: allcards[x].name, cost: allcards[x].cost}); //maybe push an array of objects with properties?
+                matching.push({name: allcards[x].name, cost: allcards[x].cost, quantity: testdecks[i].cards[y][1]}); //maybe push an array of objects with properties?
                 //loop through each deck, and push the deck once you have looped through!
                 //how do we check after each card if it has seen all of the indexes in that array?
             } //end if testdecks
@@ -163,9 +163,6 @@ $scope.forePath	= $scope.foresighttemplate.url;
 //"tierdecks" template, initial path
 
 //function to build decks into html from the decoded decks arrays.
-$scope.deckBuild = function() {
-    angular.element(decklist).html('<p>testing</p>');
-}
 
 
 //function to change the meta page
@@ -179,7 +176,7 @@ $scope.nav2 = function(path) {
 }
 
 // store the current clicked deck 
-$scope.currentDeck ='';
+
 
 
 

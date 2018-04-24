@@ -4,9 +4,8 @@
 			<h3 class="header">Standard Decklist</h3>
 
 			<!-- create a function that can edit the decklist provided to have the mana and QTY on it, maybe a loop with adding HTML? -->
-				<ul>
-					<li ng-repeat="x in decksobject[0]">{{x.name}}</li>
-				
+				<ul class="decklist">
+					<li ng-repeat="x in decksobject[0]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				</ul>
 		</div>
 	<div class="page-content-left">

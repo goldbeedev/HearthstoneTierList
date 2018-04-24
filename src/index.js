@@ -37,7 +37,7 @@ https://api.hearthstonejson.com/v1/23966/enUS/cards.collectible.json
 app.get('/decks', function(req, res) {
     var dstrings = ["AAECAf0GBJ3iAtvpApfTAuCsAg340ALy0ALexALnywKKAbYHiNICi+EC9wSTBPzlAujnAuEHAA==", "AAECAf0EBpvTAqPrAsUE0ALCwwLKwQIM7AeWxwLJA9fhAs7yAk238QLKwwLV 4QKKAevCAqsEAA=="];
     var decoded = [];
-    for (var i = 0; i<dstrings.length; i++){
+    for (var i = 0; i < dstrings.length; i++){
       decoded.push(decode(dstrings[i]));
     }
     res.send(decoded);
