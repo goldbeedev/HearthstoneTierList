@@ -1,25 +1,9 @@
-<h1 class="header">Murloc Paladin</h1>
+<h1 class="header">Even Paladin</h1>
 <h2 class="back-button" ng-click="nav(metatemplates[1].url)">Back</h2>
 	<div class="page-content-right">
 			<h3 class="header">Standard Decklist</h3>
 				<ul class="decklist">
-					<li><span class="mana">1</span>Grimscale Chum<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Murloc Tidecaller<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Righteous Protector<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Vilefin Inquisitor<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Hydrologist<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Knife Juggler<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Rockpool Hunter<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Coldlight Seer<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Divine Favor<span class="quantity">1</span></li>
-					<li><span class="mana">2</span>Murloc Warleader<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Rallying Blade<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Unidentified Maul<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Blessing of Kings<span class="quantity">1</span></li>
-					<li><span class="mana">4</span>Call to Arms<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Gentle Megasaur<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Spellbreaker<span class="quantity">1</span></li>
-					<li><span class="mana">6</span>Sunkeeper Tarim<span class="quantity">1</span></li>
+					<li ng-repeat="x in decksobject[1]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				
 				</ul>
 		</div>

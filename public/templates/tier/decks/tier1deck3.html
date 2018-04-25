@@ -1,26 +1,9 @@
-<h1 class="header">Dude Paladin</h1>
+<h1 class="header">Murloc Paladin</h1>
 <h2 class="back-button" ng-click="nav(metatemplates[1].url)">Back</h2>
 	<div class="page-content-right">
 			<h3 class="header">Standard Decklist</h3>
 				<ul class="decklist">
-					<li><span class="mana">1</span>Argent Squire<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Lost in the Jungle<span class="quantity">2</span></li>
-					<li><span class="mana">1</span>Righteous Protector<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Dire Wolf Alpha<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Equality<span class="quantity">1</span></li>
-					<li><span class="mana">3</span>Knife Juggler<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Divine Favor<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Rallying Blade<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Steward of Darkshire<span class="quantity">2</span></li>
-					<li><span class="mana">3</span>Unidentified Maul<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Call To Arms<span class="quantity">2</span></li>
-					<li><span class="mana">4</span>Lightfused Stegodon<span class="quantity">2</span></li>
-					<li><span class="mana">5</span>Level Up!<span class="quantity">1</span></li>
-					<li><span class="mana">5</span>Stand Against Darkness<span class="quantity">2</span></li>
-					<li><span class="mana">6</span>Crystal Lion<span class="quantity">2</span></li>
-					<li><span class="mana">6</span>Sunkeeper Tarim<span class="quantity">1</span></li>
-					<li><span class="mana">7</span>Vinecleaver<span class="quantity">1</span></li>
-				
+					<li ng-repeat="x in decksobject[2]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				</ul>
 		</div>
 	<div class="page-content-left">

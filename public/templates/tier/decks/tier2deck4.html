@@ -1,21 +1,9 @@
-<h1 class="header">Jade Druid</h1>
+<h1 class="header">Tempo Mage</h1>
 <h2 class="back-button" ng-click="nav(metatemplates[2].url)">Back</h2>
 	<div class="page-content-right">
 			<h3 class="header">Standard Decklist</h3>
 				<ul class="decklist">
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
-					<li><span class="mana">2</span>Northshire Cleric<span class="quantity">2</span></li>
+					<li ng-repeat="x in decksobject[7]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				
 				</ul>
 		</div>
