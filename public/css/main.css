@@ -166,6 +166,22 @@ h1 {
 	outline-offset: 2px;
 }
 
+.news-text{
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+	margin: 45px auto;
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px;
+}
+
+.updates-text {
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+	margin: 45px auto;
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px;
+}
+
 .tier-text {
 	background-color: rgba(0,0,0,0.5);
 	position: relative;
@@ -175,6 +191,14 @@ h1 {
 	font-size: 16px;
 	list-style-type: none;
 	padding: 0;
+}
+
+.deck-overview {
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+	margin: 45px auto;
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px; 
 }
 
 .page-content-left {

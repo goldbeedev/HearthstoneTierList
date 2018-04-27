@@ -33,7 +33,7 @@ function navAppend() {
 //get the decks endpoint, this will get the converted deck codes and set the response.data to the testdecks variable.
 $http.get('/decks')
      .then((response) => {
-    testdecks = response.data;
+    testdecks = response.data.decks;
     console.log(testdecks);
     console.log(testdecks[0].cards.length);
   //get the cards index with the most index values 
@@ -42,7 +42,7 @@ $http.get('/decks')
 //get the my-data-endpoint, this gets all the cards from the 
 $http.get('/my-data-endpoint') 
      .then((response) => {
-     console.log(response.data.body);
+     console.log("This is the decks response " + response.data.body);
      //store all the cards in a variable
 
      //variable for each decks length in the function so we can push results to an object once each has been iterated through.

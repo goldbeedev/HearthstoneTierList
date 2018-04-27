@@ -43,7 +43,7 @@ app.get('/decks', function(req, res) {
     for (var i = 0; i < dstrings.length; i++){
       decoded.push(decode(dstrings[i]));
     }
-    res.send(decoded);
+    res.send({decks: decoded, codes: dstrings});
 });
 
 // vendor scripts
