@@ -1,11 +1,11 @@
 <h1 class="header">Rush Warrior</h1>
-<h2 class="back-button" ng-click="nav(metatemplates[4].url)">Back</h2>
+<h2 class="back-button" ng-click="nav(metaTemplates[4].url)">Back</h2>
 	<div class="page-content-right">
 			<h3 class="header">Standard Decklist</h3>
 				<ul class="decklist">
-					<li ng-repeat="x in decksobject[13]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
-				
+					<li ng-repeat="x in decksObject[13]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				</ul>
+					<button ng-click="deckCodeCopy();">Copy Deck Code</button>
 		</div>
 	<div class="page-content-left">
 		<div class="standard-decklist">
@@ -14,20 +14,20 @@
 					<div class="weak-against">
 						<h3>Weak Against</h3>
 							<ul class="weak-list">
-								<li ng-click="nav(tierdecks[0].url)" class="weak-list-deck"><span class="warlock-icon"></span>Cubelock</li>
-								<li ng-click="nav(tierdecks[5].url)" class="strong-list-deck"><span class="paladin-icon"></span>Big Spell Mage</li>
-								<li ng-click="nav(tierdecks[10].url)" class="strong-list-deck"><span class="hunter-icon"></span>Control Priest</li>
-								<li ng-click="nav(tierdecks[9].url)" class="strong-list-deck"><span class="hunter-icon"></span>Taunt Druid</li>
-								<li ng-click="nav(tierdecks[12].url)" class="strong-list-deck"><span class="hunter-icon"></span>Odd Face Hunter</li>
+								<li ng-click="nav(tierDecks[0].url)" class="weak-list-deck"><span class="warlock-icon"></span>Cubelock</li>
+								<li ng-click="nav(tierDecks[5].url)" class="strong-list-deck"><span class="paladin-icon"></span>Big Spell Mage</li>
+								<li ng-click="nav(tierDecks[10].url)" class="strong-list-deck"><span class="hunter-icon"></span>Control Priest</li>
+								<li ng-click="nav(tierDecks[9].url)" class="strong-list-deck"><span class="hunter-icon"></span>Taunt Druid</li>
+								<li ng-click="nav(tierDecks[12].url)" class="strong-list-deck"><span class="hunter-icon"></span>Odd Face Hunter</li>
 						</ul>
 					</div>
 						<div class="strong-against">
 							<h3>Strong against</h3>
 								<ul class="strong-list">
-									<li ng-click="nav(tierdecks[1].url)" class="strong-list-deck"><span class="paladin-icon"></span>Even Paladin</li>
-									<li ng-click="nav(tierdecks[2].url)" class="strong-list-deck"><span class="paladin-icon"></span>Murloc Paladin</li>
-									<li ng-click="nav(tierdecks[4].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Paladin</li>
-									<li ng-click="nav(tierdecks[6].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Rogue</li>
+									<li ng-click="nav(tierDecks[1].url)" class="strong-list-deck"><span class="paladin-icon"></span>Even Paladin</li>
+									<li ng-click="nav(tierDecks[2].url)" class="strong-list-deck"><span class="paladin-icon"></span>Murloc Paladin</li>
+									<li ng-click="nav(tierDecks[4].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Paladin</li>
+									<li ng-click="nav(tierDecks[6].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Rogue</li>
 						</div>
 					<div class="mulligan-guide"><h3>Mulligan Guide</h3></div>
 				</div>

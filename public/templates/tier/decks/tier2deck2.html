@@ -1,11 +1,11 @@
 <h1 class="header">Big Spell Mage</h1>
-<h2 class="back-button" ng-click="nav(metatemplates[2].url)">Back</h2>
+<h2 class="back-button" ng-click="nav(metaTemplates[2].url)">Back</h2>
 	<div class="page-content-right">
 			<h3 class="header">Standard Decklist</h3>
 				<ul class="decklist">
-					<li ng-repeat="x in decksobject[5]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
-				
+					<li ng-repeat="x in decksObject[5]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				</ul>
+					<button ng-click="deckCodeCopy();">Copy Deck Code</button>
 		</div>
 	<div class="page-content-left">
 		<div class="standard-decklist">
@@ -14,17 +14,17 @@
 					<div class="weak-against">
 						<h3>Weak Against</h3>
 							<ul class="weak-list">
-								<li ng-click="nav(tierdecks[7].url)" class="weak-list-deck"><span class="mage-icon"></span>Tempo mage</li>
-								<li ng-click="nav(tierdecks[3].url)" class="strong-list-deck"><span class="jade-icon"></span>Spiteful Druid</li>
+								<li ng-click="nav(tierDecks[7].url)" class="weak-list-deck"><span class="mage-icon"></span>Tempo mage</li>
+								<li ng-click="nav(tierDecks[3].url)" class="strong-list-deck"><span class="jade-icon"></span>Spiteful Druid</li>
 						</ul>
 					</div>
 						<div class="strong-against">
 							<h3>Strong against</h3>
 								<ul class="strong-list">
-									<li ng-click="nav(tierdecks[1].url)" class="strong-list-deck"><span class="paladin-icon"></span>Even Paladin</li>
-									<li ng-click="nav(tierdecks[4].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Paladin</li>
-									<li ng-click="nav(tierdecks[3].url)" class="strong-list-deck"><span class="paladin-icon"></span>Murloc Paladin</li>
-									<li ng-click="nav(tierdecks[6].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Rogue</li>
+									<li ng-click="nav(tierDecks[1].url)" class="strong-list-deck"><span class="paladin-icon"></span>Even Paladin</li>
+									<li ng-click="nav(tierDecks[4].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Paladin</li>
+									<li ng-click="nav(tierDecks[3].url)" class="strong-list-deck"><span class="paladin-icon"></span>Murloc Paladin</li>
+									<li ng-click="nav(tierDecks[6].url)" class="strong-list-deck"><span class="paladin-icon"></span>Odd Rogue</li>
 						</div>
 					<div class="mulligan-guide"><h3>Mulligan Guide</h3></div>
 				</div>

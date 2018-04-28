@@ -11,18 +11,20 @@ angular.module('app')
 $scope.$location = $location;
 
 //setup deck variables
-var testdecks;
-var allcards;
+var testDecks;
+var allCards;
 var matching = [];
-$scope.decksobject = [];
+$scope.decksObject = [];
 var currentDeck;
+var deckCodes;
+var codeNeeded 
 //store the html structure for the cards lists.
 var deckhtml;
 
 //append function to append class that hides the nav links for responsive design.
 function navAppend() {
-	var navlinks = angular.element(document.querySelector('.navlinks'));
-	navlinks.addClass('js');
+	var navLinks = angular.element(document.querySelector('.navlinks'));
+	navLinks.addClass('js');
 
 } //end function navAppend
 
@@ -33,9 +35,10 @@ function navAppend() {
 //get the decks endpoint, this will get the converted deck codes and set the response.data to the testdecks variable.
 $http.get('/decks')
      .then((response) => {
-    testdecks = response.data.decks;
-    console.log(testdecks);
-    console.log(testdecks[0].cards.length);
+    testDecks = response.data.decks;
+    deckCodes = response.data.codes;
+    console.log(testDecks);
+    console.log(testDecks[0].cards.length);
   //get the cards index with the most index values 
   });
 
@@ -48,20 +51,20 @@ $http.get('/my-data-endpoint')
      //variable for each decks length in the function so we can push results to an object once each has been iterated through.
      // var arrlen = testdecks[i].cards.length;
 
-     allcards = response.data.body;
-     console.log(allcards[0].dbfId);
+     allCards = response.data.body;
+     console.log(allCards[0].dbfId);
      
-     for (var i = 0; i < testdecks.length; i++) {
-       for (var y = 0; y < testdecks[i].cards.length; y++) {       //loop through the cards inside the test decks array - need to come up with a way to push the cards after each deck!
-            console.log(testdecks[i].cards.length);
-        for (var x = 0; x < allcards.length; x++) {  //looop through all the cards in our api and check if their dbfId matches the decoded ones in test decks!
+     for (var i = 0; i < testDecks.length; i++) {
+       for (var y = 0; y < testDecks[i].cards.length; y++) {       //loop through the cards inside the test decks array - need to come up with a way to push the cards after each deck!
+            console.log(testDecks[i].cards.length);
+        for (var x = 0; x < allCards.length; x++) {  //looop through all the cards in our api and check if their dbfId matches the decoded ones in test decks!
             
-            if (testdecks[i].cards[y][0] === allcards[x].dbfId) {
-                matching.push({name: allcards[x].name, cost: allcards[x].cost, quantity: testdecks[i].cards[y][1]}); //maybe push an array of objects with properties?
+            if (testDecks[i].cards[y][0] === allCards[x].dbfId) {
+                matching.push({name: allCards[x].name, cost: allCards[x].cost, quantity: testDecks[i].cards[y][1]}); //maybe push an array of objects with properties?
                 //loop through each deck, and push the deck once you have looped through!
                 //how do we check after each card if it has seen all of the indexes in that array?
             } //end if testdecks
-            var arrlen = testdecks[i].cards.length;
+            var arrlen = testDecks[i].cards.length;
 
             
             //when we finish looping through an array of cards, push them to an object labeled as such
@@ -69,14 +72,14 @@ $http.get('/my-data-endpoint')
             //end if arrlen
         } //end for loop
         if (arrlen === y + 1) {
-                $scope.decksobject.push(matching);
+                $scope.decksObject.push(matching);
                 matching = [];
             } 
        } //end for loop
     } //end for loop
 console.log(matching);
-console.log($scope.decksobject);
-console.log($scope.decksobject.length);
+console.log($scope.decksObject);
+console.log($scope.decksObject.length);
   }); //end then response function
 
 //***********************************************************
@@ -115,15 +118,16 @@ for (const { button, page } of pages) {
 }
 
 //templates for the meta page.
- $scope.metatemplates =
+ $scope.metaTemplates =
     [{ name: 'metamain', url: 'templates/metamain.html'},
      { name: 'tier1', url: 'templates/tier/tier1.html'},
      { name: 'tier2', url: 'templates/tier/tier2.html'},
      { name: 'tier3', url: 'templates/tier/tier3.html'},
      { name: 'tier4', url: 'templates/tier/tier4.html'}];
 
+//eventually write a function that loops through all decks in the deck codes, assigns a name and url dynamically, so it builds it automatically.
 //templates for tier deck window
- $scope.tierdecks =
+ $scope.tierDecks =
  	[{ name: 'tier1deck1', url: 'templates/tier/decks/tier1deck1.html'},
      { name: 'tier1deck2', url: 'templates/tier/decks/tier1deck2.html'},
      { name: 'tier1deck3', url: 'templates/tier/decks/tier1deck3.html'},
@@ -142,7 +146,7 @@ for (const { button, page } of pages) {
      { name: 'tier4deck4', url: 'templates/tier/decks/tier4deck4.html'}];
 
 //templates for foresight page
- $scope.foresighttemplates = 
+ $scope.foresightTemplates = 
  	[{ name: 'foresightmain', url: 'templates/metaforesight.html'},
  	 { name: 'ftier1', url: 'templates/ftier/ftier1.html'},
  	 { name: 'ftier2', url: 'templates/ftier/ftier2.html'},
@@ -150,14 +154,14 @@ for (const { button, page } of pages) {
  	 { name: 'ftier4', url: 'templates/ftier/ftier4.html'}]
  
  //set initial meta and foresight view.
- $scope.metatemplate = $scope.metatemplates[0];
- $scope.foresighttemplate = $scope.foresighttemplates[0];
+ $scope.metaTemplate = $scope.metaTemplates[0];
+ $scope.foresighttemplate = $scope.foresightTemplates[0];
 
  //tier 1 function to change the template
 //come up with more efficient solution for this
 
 //"meta" page template path, starts out at meta main, and changes based on scope.nav function
-$scope.metaPath = $scope.metatemplate.url;
+$scope.metaPath = $scope.metaTemplate.url;
 //"metaforesight" page template path, starts out at foresightmain, and changes based on scope.nav2 function
 $scope.forePath	= $scope.foresighttemplate.url;
 //"tierdecks" template, initial path
@@ -165,10 +169,26 @@ $scope.forePath	= $scope.foresighttemplate.url;
 //function to build decks into html from the decoded decks arrays.
 
 
+function findWithAttr(array, attr, value) {
+    for(var i = 0; i < array.length; i ++) {
+        if(array[i][attr] === value) {
+            codeNeeded = deckCodes[i];
+            console.log(codeNeeded);
+            return codeNeeded;
+        }
+    }
+    return -1;
+}
+
 //function to change the meta page
 $scope.nav = function(path) {
 	$scope.metaPath = path;
+    console.log("this is the path: " + path);
+
 }
+
+
+
 
 //function to change the foresight page
 $scope.nav2 = function(path) {
@@ -176,6 +196,9 @@ $scope.nav2 = function(path) {
 }
 
 // store the current clicked deck 
+$scope.deckCodeCopy = function(path) {
+findWithAttr($scope.tierDecks, 'url', $scope.metaPath);
+}
 
 
 
