@@ -17,7 +17,7 @@ var matching = [];
 $scope.decksObject = [];
 var currentDeck;
 var deckCodes;
-var codeNeeded 
+var codeNeeded;
 //store the html structure for the cards lists.
 var deckhtml;
 
@@ -170,10 +170,20 @@ $scope.forePath	= $scope.foresighttemplate.url;
 
 
 function findWithAttr(array, attr, value) {
+    var appendedCode = document.createElement('textarea');
+    appendedCode.setAttribute("id", 'deck-code');
+    appendedCode.setAttribute('readonly', '');
+    appendedCode.style.position = 'absolute';
+    appendedCode.style.left = '-9999px';
+   
     for(var i = 0; i < array.length; i ++) {
         if(array[i][attr] === value) {
             codeNeeded = deckCodes[i];
-            console.log(codeNeeded);
+            appendedCode.value = codeNeeded;
+            document.body.appendChild(appendedCode);
+            appendedCode.select();
+            document.execCommand('copy');
+            document.body.removeChild(appendedCode);
             return codeNeeded;
         }
     }
@@ -195,9 +205,12 @@ $scope.nav2 = function(path) {
 	$scope.forePath = path;
 }
 
-// store the current clicked deck 
+
+
+//store the current clicked deck and copy it to the clipboard.
 $scope.deckCodeCopy = function(path) {
-findWithAttr($scope.tierDecks, 'url', $scope.metaPath);
+    findWithAttr($scope.tierDecks, 'url', $scope.metaPath);
+    alert('Deck code copied!');
 }
 
 
