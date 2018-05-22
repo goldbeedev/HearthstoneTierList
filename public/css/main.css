@@ -78,8 +78,9 @@ body {
 }
 
 #nav ul li{
+	margin: 0 10px;
 	display: inline;
-	font-family: 'Exo 2';
+	font-family: 'Mate SC';
 	font-size: 24px;
 	text-decoration: none;
 	-webkit-transition-duration: 0.4s; /* Safari */
@@ -127,7 +128,7 @@ body {
 }
 
 .logo-text {
-	font-family: 'Exo 2';
+	font-family: 'Mate SC';
 	float: left;
 	color: white;
 	font-size: 24px;
@@ -136,8 +137,16 @@ body {
 
 /** General Content Styling **/
 
+h2 {
+	text-shadow: 5px 5px 8px #000000;
+}
+
+h3 {
+	text-shadow: 5px 5px 8px #000000;
+}
+
 h1 {
-	font-family: 'Exo 2';
+	font-family: 'Condiment';
 	color: white;
 	font-size: 12;
 	text-shadow: 5px 5px 8px #000000;
@@ -172,6 +181,10 @@ h1 {
 	margin: 45px auto;
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
+}
+
+.news-updates {
+	text-shadow: 5px 5px 8px #000000;
 }
 
 .updates-text {
@@ -421,11 +434,16 @@ button:hover {
 }
 
 /** decklist stuff **/
+.decklist-number {
+/*	font-size: 18px;*/
+}
 
 .mana {
+	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 	float: left;
 	border: 1px solid #000;
 	background-color: rgba(0,0,139,.7);
+	font-size: 20px;
 }
 
 .quantity {
@@ -505,11 +523,16 @@ button:hover {
 	transition: 1s;
 }
 
-/* flexslider */
-
-
+/* slides */
+.analysis-section {
+	background-color: rgba(0,0,0,0.5);
+	outline: rgba(0,0,0,.5) solid 1px;
+	outline-offset: 2px;
+}
 
 /* tier deck logos */
+
+
 
 .tier-deck.priest {
 	background: linear-gradient(to right, rgba(255,173,47,0.60), rgba(168,255,255,0.40)), url(../images/anduin-banner.jpg) no-repeat left;
