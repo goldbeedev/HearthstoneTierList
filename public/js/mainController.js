@@ -10,6 +10,8 @@ angular.module('app')
 //set location to equal $location for data binding on the template
 $scope.$location = $location;
 
+console.log("this is the location: " + $scope.$location);
+
 //setup deck variables
 var testDecks;
 var allCards;
