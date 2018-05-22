@@ -7,10 +7,13 @@
 angular.module('app')
 .controller('mainController', ['$scope', '$location', '$http', '$log', function($scope, $location, $http, $log){
 
+
+
 //set location to equal $location for data binding on the template
 $scope.$location = $location;
 
-console.log("this is the location: " + $scope.$location);
+// alert($location.path());
+
 
 //setup deck variables
 var testDecks;
@@ -155,6 +158,14 @@ for (const { button, page } of pages) {
  	 { name: 'ftier3', url: 'templates/ftier/ftier3.html'},
  	 { name: 'ftier4', url: 'templates/ftier/ftier4.html'}]
  
+//slider templates
+$scope.sliderTemplates =
+[{ name: 'slide1', url: 'templates/slider/slide1.html'},
+ { name: 'slide2', url: 'templates/slider/slide2.html'},
+ { name: 'slide3', url: 'templates/slider/slide3.html'}]
+
+
+
  //set initial meta and foresight view.
  $scope.metaTemplate = $scope.metaTemplates[0];
  $scope.foresighttemplate = $scope.foresightTemplates[0];
@@ -197,6 +208,11 @@ $scope.nav = function(path) {
 	$scope.metaPath = path;
     console.log("this is the path: " + path);
 
+//when navigating, if the metapath becomes metamain start the slider again.
+if ($scope.metaPath === 'templates/metamain.html') {
+        sliderStart();
+    }
+
 }
 
 
@@ -214,6 +230,37 @@ $scope.deckCodeCopy = function(path) {
     findWithAttr($scope.tierDecks, 'url', $scope.metaPath);
     alert('Deck code copied!');
 }
+
+
+
+//slider
+function sliderStart() {
+    $(document).ready(function(){
+    $(".flexslider")
+            .flexslider({
+                animation: "slide",
+//                      easing: "swing",
+                    slideshowSpeed: 3000,
+                    animationSpeed: 200,
+                    controlNav: true,
+                    pauseonHover: true,
+                    animationLoop: true,
+                    slideshow: true,
+                    useCSS: false
+                    });
+        });
+}
+
+$(window).on('load', function(){
+    sliderStart();
+});
+
+
+
+//start the slider initially
+
+
+
 
 
 
