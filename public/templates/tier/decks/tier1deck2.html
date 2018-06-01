@@ -1,7 +1,7 @@
-<h1 class="header">Even Paladin</h1>
+<h1 class="header">Taunt Druid</h1>
 <h2 class="back-button" ng-click="nav(metaTemplates[1].url)">Back</h2>
 	<div class="page-content-right">
-			<h3 class="header">Standard Decklist</h3>
+			<h3 class="header">Featured Decklist: Thjis Legend 8</h3>
 				<ul class="decklist">
 					<li ng-repeat="x in decksObject[1]"><span class="mana">{{x.cost}}</span>{{x.name}}<span class="quantity">{{x.quantity}}</span></li>
 				</ul>
@@ -10,23 +10,22 @@
 	<div class="page-content-left">
 		<div class="standard-decklist">
 			<h3 class="header">About</h3>
-				<p class="deck-overview">With witchwood introducing new "even" and "odd" based decks, there is no doubt about it, even paladin is the best of the various even and odd decks.  Even paladin seems to have endless disposable minions, along with endless buffs for those minions should they stick on the board.  The deck feels curvy most of the time, considering Genn Greymane makes your hero power cost 1 at the start of the game.  This is a close second in power to only cubelock, and losing to this deck feels exhausting.  The main strategy is to go wide on the board, with several easy refills in the form of call to arms and jailor, and then buff your board with one of the many buff cards the deck boasts.</p>
+				<p class="deck-overview">With the recent cubelock nerf Taunt Druid sees a window of opportunity.  Taunt Druid with Hadronox has made a strong comeback since the inception of Witchwood, as the expansion brought a new Druid card "Witching Hour" which allows players to resummon Hadronox after it has died.  The deck never saw much play before this card, because players would just silence or polymorph the Hadronox.  Even if it was played and destroyed, after killing all the resummoned taunts it left the player out of steam.  This deck has powerful swing turns, and the ability to use Carnivorous Cube on the resummoned Hadronox makes it feel like an uphill battle quite often.  Couple powerful minions, with seemingly infinite heal and you have a deck with a small window of weakness.  The strategy is fairly straightforward: ramp up your mana early, play taunt minions to control the board, bring back said taunt minions multiple times with Hadronox combos.</p>
 					<div class="weak-against">
 						<h3>Weak Against</h3>
 							<ul class="weak-list">
-								<li ng-click="nav(tierDecks[0].url)" class="weak-list-deck"><span class="warlock-icon"></span>Cubelock</li>
+								<li ng-click="nav(tierDecks[6].url)" class="weak-list-deck"><span class="warlock-icon"></span>Cubelock</li>
 								<li ng-click="nav(tierDecks[5].url)" class="weak-list-deck"><span class="mage-icon"></span>Big Spell Mage</li>
-								<li ng-click="nav(tierDecks[10].url)" class="weak-list-deck"><span class="warlock-icon"></span>Control Priest</li>
-								<li ng-click="nav(tierDecks[9].url)" class="weak-list-deck"><span class="warlock-icon"></span>Taunt Druid</li>
+								<li ng-click="nav(tierDecks[8].url)" class="weak-list-deck"><span class="warlock-icon"></span>Miracle Rogue</li>
 						</ul>
 					</div>
 						<div class="strong-against">
 							<h3>Strong against</h3>
 								<ul class="strong-list">
-									<li ng-click="nav(tierDecks[7].url)" class="strong-list-deck"><span class="mage-icon"></span>Tempo Mage</li>
-									<li ng-click="nav(tierDecks[8].url)" class="strong-list-deck"><span class="hunter-icon"></span>Quest Rogue</li>
-									<li ng-click="nav(tierDecks[3].url)" class="strong-list-deck"><span class="jade-icon"></span>Spiteful Druid</li>
-									<li ng-click="nav(tierDecks[14].url)" class="strong-list-deck"><span class="rogue-icon"></span>Miracle Rogue</li>
+									<li ng-click="nav(tierDecks[4].url)" class="strong-list-deck"><span class="mage-icon"></span>Odd Paladin</li>
+									<li ng-click="nav(tierDecks[2].url)" class="strong-list-deck"><span class="hunter-icon"></span>Token Druid</li>
+									<li ng-click="nav(tierDecks[10].url)" class="strong-list-deck"><span class="jade-icon"></span>Even Shaman</li>
+									
 						</div>
 					<div class="mulligan-guide"><h3>Mulligan Guide</h3></div>
 				</div>

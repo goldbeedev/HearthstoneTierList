@@ -355,6 +355,15 @@ i.left {
 
 /** Tier Sections and Buttons **/
 
+.under-construction-text {
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	font-size: 36px;
+	font-family: 'Roboto Condensed';
+	color: white;
+}
+
 .tier-button {
 	background-color: rgba(255,255,255,.2);
 	background-image: url("../images/hstone.png");
@@ -439,10 +448,10 @@ button:hover {
 }
 
 .mana {
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	float: left;
 	border: 1px solid #000;
-	background-color: rgba(0,0,139,.7);
+	background-color: rgba(0,191,255,.7);
 	font-size: 20px;
 }
 
@@ -529,6 +538,19 @@ button:hover {
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
 }
+
+/* icons */
+/*.hero-icon {
+	width: 20px;
+	height: 20px;
+}*/
+
+/*.mage-icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/mage-small2.png);
+}*/
 
 /* tier deck logos */
 

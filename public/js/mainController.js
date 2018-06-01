@@ -240,7 +240,7 @@ function sliderStart() {
             .flexslider({
                 animation: "slide",
 //                      easing: "swing",
-                    slideshowSpeed: 3000,
+                    slideshowSpeed: 5000,
                     animationSpeed: 200,
                     controlNav: true,
                     pauseonHover: true,
