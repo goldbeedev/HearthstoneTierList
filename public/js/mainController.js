@@ -235,7 +235,7 @@ $scope.deckCodeCopy = function(path) {
 
 //slider
 function sliderStart() {
-
+    $(document).ready(function(){
     $(".flexslider")
             .flexslider({
                 animation: "slide",
@@ -248,7 +248,7 @@ function sliderStart() {
                     slideshow: true,
                     useCSS: false
                     });
-     
+        });
 }
 
 $(window).on('load', function(){
