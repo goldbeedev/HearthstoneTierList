@@ -4,20 +4,25 @@
 
 /** 3 page single page styling **/
 
+.pages:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity : 0.4;
+    z-index: -1;
+}
+
 #page1 {
    position: relative;
 }
 #page1:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('../images/warrior.jpg') no-repeat center center fixed;
-    width: 100%;
-    height: 100%;
-    opacity : 0.4;
-    z-index: -1;
+	background: url('../images/warrior.jpg') no-repeat center center fixed;
+	background-size: cover;
+
 }
 
 #page2 {
@@ -25,16 +30,8 @@
 }
 
 #page2:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('../images/dr-boom.jpg') no-repeat center center fixed;
-    width: 100%;
-    height: 100%;
-    opacity : 0.4;
-    z-index: -1;
+	background: url('../images/dr-boom.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
 
 #page3 {
@@ -42,18 +39,9 @@
 }
 
 #page3:after {
-    content : "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('../images/thrall.jpg') no-repeat center center fixed;
-    width: 100%;
-    height: 100%;
-    opacity : 0.4;
-    z-index: -1;
+	background: url('../images/thrall.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
-
 
 .pages {
 	height: 1200px;
@@ -103,7 +91,7 @@ body {
 
 .nav-links {
 	float: right;
-	padding: 0px;
+	padding: 20px;
 	margin: 0px;
 }
 
@@ -133,9 +121,14 @@ body {
 	color: white;
 	font-size: 24px;
 	margin: 0px;
+
 }
 
 /** General Content Styling **/
+p {
+	padding: 20px;
+	text-align: left;
+}
 
 h2 {
 	text-shadow: 5px 5px 8px #000000;
@@ -196,6 +189,8 @@ h1 {
 }
 
 .tier-text {
+	padding: 20px;
+	text-align: left;
 	background-color: rgba(0,0,0,0.5);
 	position: relative;
 	margin: 50px auto;
@@ -206,6 +201,10 @@ h1 {
 	padding: 0;
 }
 
+.tier-text li {
+	padding: 5px 10px;
+}
+
 .deck-overview {
 	background-color: rgba(0,0,0,0.5);
 	position: relative;
@@ -214,7 +213,8 @@ h1 {
 	outline-offset: 2px; 
 }
 
-.page-content-left {
+.page-content {
+	padding: 10px 30px;
 	font-family: 'Roboto Condensed';
 	font-size: 20px;
 	color: white;
@@ -224,6 +224,9 @@ h1 {
 	outline: rgba(0,0,0,.5) solid 1px;
 	outline-offset: 2px;
 	text-align: center;
+}
+
+.page-content-left {
 	width: 45%;
 	min-height: 500px;
 	top: 10%;
@@ -233,15 +236,6 @@ h1 {
 
 
 .page-content-right {
-	font-family: 'Roboto Condensed';
-	font-size: 20px;
-	color: white;
-	position: absolute;
-	display: block;
-	background-color: rgba(0,0,0,0.5);
-	outline: rgba(0,0,0,.5) solid 1px;
-	outline-offset: 2px;
-	text-align: center;
 	width: 40%;
 	min-height: 400px;
 	top: 10%;
@@ -373,7 +367,8 @@ i.left {
 	outline: rgba(255,255,255,.2) solid 1px;
 	outline-offset: -2px;
 	-webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	box-shadow: 5px 6px 25px 1px rgba(0,0,0,0.5);
 }
 
 .tier-button:hover {
@@ -416,12 +411,15 @@ button {
 	font-size: 20px;
 	background-color: inherit;
     -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	padding: 10px;
+	color: white;
 }
 
 button:hover {
      /* black */
-    color: white;
+	color: rgba(0,191,255,.7);
+	cursor: pointer;
 }
 
 .back-button {
@@ -448,6 +446,8 @@ button:hover {
 }
 
 .mana {
+	margin-right: 10px;
+	padding: 3px;
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	float: left;
 	border: 1px solid #000;
@@ -479,10 +479,12 @@ button:hover {
 }
 
 .decklist li {
+	padding: 5px;
 	text-align: center;
 	background-color: rgba(44,53,57,0.3);
 	border: 1px solid black;
 	width: 100%;
+	text-align: left;
 }
 
 .decklists {
