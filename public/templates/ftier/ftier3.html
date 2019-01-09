@@ -1,9 +1,19 @@
 <h1 class="header">Tier 3</h1>
- <div>
- 	<p class="archetype">Archetype</p>
- 		<p class="decklists">Decklists</p>
- </div>
- 	<div class="page-content-left">
-		</div>
-	<div class="page-content-right">
+<h2 class="back-button" ng-click="nav2(foresightTemplates[0].url)">Back</h2>
+<div class="page-content page-content-left">
+	<p class="archetype">Archetype</p>
+	<!-- change class to the hero class for that deck, to change the background image! -->
+	<!-- write a function that builds the deck stored in the array based on which deck is clicked, then we only need 1 deck template file!!! -->
+		<div class="tier-deck hunter" ng-click="nav(tierDecks[0].url)"><p class="arch-text">Spell Hunter</p></div>
+			<div class="tier-deck druid" ng-click="nav(tierDecks[1].url)"><p class="arch-text">Taunt Druid</p></div>
+				<div class="tier-deck druid" ng-click="nav(tierDecks[2].url)"><p class="arch-text">Token Druid</p></div>
+					<div class="tier-deck warlock" ng-click="nav(tierDecks[3].url)"><p class="arch-text">Even Warlock</p></div>
+				</div>
+
+	<div class="page-content page-content-right">
+		<p class="archetype">About</p>
+			<div class="tier-about-text">
+				<p class="tier-about-p">Tier 1 includes the decks that are dominating the current meta.  Losing against these decks often feels very one-sided or unfair, unless of course you are playing a tier 1 deck yourself.  This causes the meta to form around a select few decks, of which you either play them or play to beat them to rank up the ladder.  You should seriously consider playing a tier 1 deck if you want to rank up the ladder.  Currently, two classes are dominating this section: Hunter and Druid.</p>
+			<!-- <div class="tier-deck warlock"></div> -->
+				<p class="tier-about-p">Decks to beat: Token Druid, Taunt Druid, Spell Hunter</p>
 </div>

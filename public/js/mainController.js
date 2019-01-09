@@ -220,7 +220,8 @@ if ($scope.metaPath === 'templates/metamain.html') {
 
 //function to change the foresight page
 $scope.nav2 = function(path) {
-	$scope.forePath = path;
+    $scope.forePath = path;
+    console.log($scope.forePath);
 }
 
 
@@ -235,25 +236,21 @@ $scope.deckCodeCopy = function(path) {
 
 //slider
 function sliderStart() {
-    $(document).ready(function(){
-    $(".flexslider")
-            .flexslider({
-                animation: "slide",
-//                      easing: "swing",
-                    slideshowSpeed: 5000,
-                    animationSpeed: 200,
-                    controlNav: true,
-                    pauseonHover: true,
-                    animationLoop: true,
-                    slideshow: true,
-                    useCSS: false
-                    });
-        });
+    console.log('sliderstart is going')
+    $(".flexslider").html('<p>this is a test</p>');
+//             .flexslider({
+//                 animation: "slide",
+// //                      easing: "swing",
+//                     slideshowSpeed: 5000,
+//                     animationSpeed: 200,
+//                     controlNav: true,
+//                     pauseonHover: true,
+//                     animationLoop: true,
+//                     slideshow: true,
+//                     useCSS: false
+//                     });
 }
-
-$(window).on('load', function(){
-    sliderStart();
-});
+sliderStart();
 
 
 
